@@ -2,6 +2,7 @@
 
 let time = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm']
 
+
 let Seattle = 
 {
     LocationName : 'Seattle',
@@ -10,13 +11,15 @@ let Seattle =
     AvagCookie : 6.3 ,
     CustomerNum:[],
     cookieSales : [],
-    
+    total : 0,
+
     render : function ()
     {
     let container = document.getElementById('S1');
     let PEl = document.createElement('p');
     container.appendChild(PEl);
     PEl.textContent = this.LocationName;
+    
     let UlEl = document.createElement('ul');
     container.appendChild(UlEl)
     
@@ -26,12 +29,19 @@ let Seattle =
         UlEl.appendChild(LiEl);
         LiEl.textContent = `${time[i]} : ${ this.cookieSales[i]}`;
     }
-},
+
+    let total= document.createElement('li');
+    UlEl.appendChild(total);
+     total.textContent= `total: ${this.total}`
+
+    },
     generate :function ()
     {
         for(let i=0;i<time.length;i++)
         { 
             this.cookieSales.push( this.CustomerNum[i] * this.AvagCookie );
+            this.total += this.cookieSales[i];
+
         }
     },
 
@@ -41,7 +51,7 @@ let Seattle =
        let maxCum = Math.floor(this.maxCum);
        for(let i=0;i<time.length;i++)
        {
-            this.CustomerNum.push(Math.floor(Math.random() * (maxCum - minCum + 1) + minCum)); //The maximum is inclusive and the minimum is inclusive
+            this.CustomerNum.push(Math.floor(Math.random() * (maxCum - minCum + 1) + minCum)); 
  
        }
     }
@@ -63,6 +73,8 @@ let Tokyo =
     AvagCookie : 1.2 ,
     CustomerNum:[],
     cookieSales : [],
+    total : 0,
+
     render : function ()
     {
     let container = document.getElementById('T1');
@@ -78,12 +90,19 @@ let Tokyo =
         UlEl.appendChild(LiEl);
         LiEl.textContent = `${time[i]} : ${ this.cookieSales[i]}`;
     }
+
+    let total= document.createElement('li');
+    UlEl.appendChild(total);
+     total.textContent= `total: ${this.total}`
+
 },
     generate :function ()
     {
         for(let i=0;i<time.length;i++)
         { 
             this.cookieSales.push( this.CustomerNum[i] * this.AvagCookie );
+            this.total += this.cookieSales[i];
+
         }
     },
 
@@ -93,7 +112,7 @@ let Tokyo =
        let maxCum = Math.floor(this.maxCum);
        for(let i=0;i<time.length;i++)
        {
-            this.CustomerNum.push(Math.floor(Math.random() * (maxCum - minCum + 1) + minCum)); //The maximum is inclusive and the minimum is inclusive
+            this.CustomerNum.push(Math.floor(Math.random() * (maxCum - minCum + 1) + minCum)); 
  
        }
     }
@@ -112,6 +131,7 @@ let Dubai =
     AvagCookie : 3.7,
     CustomerNum:[],
     cookieSales : [],
+    total : 0,
     render : function ()
     {
     let container = document.getElementById('D1');
@@ -127,12 +147,19 @@ let Dubai =
         UlEl.appendChild(LiEl);
         LiEl.textContent = `${time[i]} : ${ this.cookieSales[i]}`;
     }
+
+    let total= document.createElement('li');
+    UlEl.appendChild(total);
+     total.textContent= `total: ${this.total}`
+
 },
     generate :function ()
     {
         for(let i=0;i<time.length;i++)
         { 
             this.cookieSales.push( this.CustomerNum[i] * this.AvagCookie );
+            this.total += this.cookieSales[i];
+
         }
     },
 
@@ -142,7 +169,7 @@ let Dubai =
        let maxCum = Math.floor(this.maxCum);
        for(let i=0;i<time.length;i++)
        {
-            this.CustomerNum.push(Math.floor(Math.random() * (maxCum - minCum + 1) + minCum)); //The maximum is inclusive and the minimum is inclusive
+            this.CustomerNum.push(Math.floor(Math.random() * (maxCum - minCum + 1) + minCum)); 
  
        }
     }
@@ -162,6 +189,8 @@ let Paris =
     AvagCookie : 2.3,
     CustomerNum:[],
     cookieSales : [],
+    total : 0,
+
     render : function ()
     {
     let container = document.getElementById('P1');
@@ -177,12 +206,18 @@ let Paris =
         UlEl.appendChild(LiEl);
         LiEl.textContent = `${time[i]} : ${ this.cookieSales[i]}`;
     }
+  
+    let total= document.createElement('li');
+    UlEl.appendChild(total);
+     total.textContent= `total: ${this.total}`
+
 },
     generate :function ()
     {
         for(let i=0;i<time.length;i++)
         { 
             this.cookieSales.push( this.CustomerNum[i] * this.AvagCookie );
+            this.total += this.cookieSales[i];
         }
     },
 
@@ -192,7 +227,7 @@ let Paris =
        let maxCum = Math.floor(this.maxCum);
        for(let i=0;i<time.length;i++)
        {
-            this.CustomerNum.push(Math.floor(Math.random() * (maxCum - minCum + 1) + minCum)); //The maximum is inclusive and the minimum is inclusive
+            this.CustomerNum.push(Math.floor(Math.random() * (maxCum - minCum + 1) + minCum));
  
        }
     }
@@ -213,6 +248,8 @@ let Lima =
     AvagCookie : 3.7,
     CustomerNum:[],
     cookieSales : [],
+    total : 0,
+
     render : function ()
     {
     let container = document.getElementById('L1');
@@ -228,12 +265,18 @@ let Lima =
         UlEl.appendChild(LiEl);
         LiEl.textContent = `${time[i]} : ${ this.cookieSales[i]}`;
     }
+
+    let total= document.createElement('li');
+    UlEl.appendChild(total);
+     total.textContent= `total: ${this.total}`
+
 },
     generate :function ()
     {
         for(let i=0;i<time.length;i++)
         { 
             this.cookieSales.push( this.CustomerNum[i] * this.AvagCookie );
+            this.total += this.cookieSales[i];
         }
     },
 
@@ -243,7 +286,7 @@ let Lima =
        let maxCum = Math.floor(this.maxCum);
        for(let i=0;i<time.length;i++)
        {
-            this.CustomerNum.push(Math.floor(Math.random() * (maxCum - minCum + 1) + minCum)); //The maximum is inclusive and the minimum is inclusive
+            this.CustomerNum.push(Math.floor(Math.random() * (maxCum - minCum + 1) + minCum)); 
  
        }
     }
