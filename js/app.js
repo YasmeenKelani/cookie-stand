@@ -131,10 +131,3 @@ Location.prototype.calculatecustomerNum= function(){
     Lima.calculatecookieSales();
     Lima.render()
     createTableFooter();
-
-
-
-
-
-
-
