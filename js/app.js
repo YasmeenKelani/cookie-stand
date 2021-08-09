@@ -106,7 +106,7 @@ Location.prototype.calculatecustomerNum= function(){
     };
 
 
-    let Seattle= new Location ('seatlle', 23, 65,6.3)
+    let Seattle= new Location ('Seatlle', 23, 65,6.3)
     let Tokyo=   new Location ('Tokyo', 3, 24,1.2)
     let Dubai=   new Location ('Dubai', 11, 38,3.7)
     let Paris=   new Location ('Paris', 20, 38,2.3)

@@ -1,7 +1,14 @@
 body {
     background-color: lightblue;
+    background-image: url(https://kingcountywtd.files.wordpress.com/2017/03/salmoncookies.jpg?w=640);
+    background-repeat: no-repeat;
+    background-size: 98%;
 }
 table,
 th,
 td {
-  border: 1px solid blue;}
+  border: 1px solid blue;
+background-color: white;
+padding-top: 10px;
+padding-bottom: 10px;
+margin: 5px;}
