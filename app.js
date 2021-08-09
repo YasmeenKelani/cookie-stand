@@ -27,7 +27,7 @@ let Seattle =
     {
         let LiEl = document.createElement('li');
         UlEl.appendChild(LiEl);
-        LiEl.textContent = `${time[i]} : ${ this.cookieSales[i]}`;
+        LiEl.textContent = `${time[i]} : ${ this.cookieSales[i]} cookies`;
     }
 
     let total= document.createElement('li');
@@ -39,7 +39,7 @@ let Seattle =
     {
         for(let i=0;i<time.length;i++)
         { 
-            this.cookieSales.push( this.CustomerNum[i] * this.AvagCookie );
+            this.cookieSales.push(Math.floor( this.CustomerNum[i] * this.AvagCookie ));
             this.total += this.cookieSales[i];
 
         }
@@ -88,7 +88,7 @@ let Tokyo =
     {
         let LiEl = document.createElement('li');
         UlEl.appendChild(LiEl);
-        LiEl.textContent = `${time[i]} : ${ this.cookieSales[i]}`;
+        LiEl.textContent = `${time[i]} : ${ this.cookieSales[i]} cookies`;
     }
 
     let total= document.createElement('li');
@@ -100,7 +100,7 @@ let Tokyo =
     {
         for(let i=0;i<time.length;i++)
         { 
-            this.cookieSales.push( this.CustomerNum[i] * this.AvagCookie );
+            this.cookieSales.push(Math.floor( this.CustomerNum[i] * this.AvagCookie ));
             this.total += this.cookieSales[i];
 
         }
@@ -145,7 +145,7 @@ let Dubai =
     {
         let LiEl = document.createElement('li');
         UlEl.appendChild(LiEl);
-        LiEl.textContent = `${time[i]} : ${ this.cookieSales[i]}`;
+        LiEl.textContent = `${time[i]} : ${ this.cookieSales[i]} cookies`;
     }
 
     let total= document.createElement('li');
@@ -157,7 +157,7 @@ let Dubai =
     {
         for(let i=0;i<time.length;i++)
         { 
-            this.cookieSales.push( this.CustomerNum[i] * this.AvagCookie );
+            this.cookieSales.push(Math.floor( this.CustomerNum[i] * this.AvagCookie ));
             this.total += this.cookieSales[i];
 
         }
@@ -204,7 +204,7 @@ let Paris =
     {
         let LiEl = document.createElement('li');
         UlEl.appendChild(LiEl);
-        LiEl.textContent = `${time[i]} : ${ this.cookieSales[i]}`;
+        LiEl.textContent = `${time[i]} : ${ this.cookieSales[i]} cookies`;
     }
   
     let total= document.createElement('li');
@@ -216,7 +216,7 @@ let Paris =
     {
         for(let i=0;i<time.length;i++)
         { 
-            this.cookieSales.push( this.CustomerNum[i] * this.AvagCookie );
+            this.cookieSales.push(Math.floor( this.CustomerNum[i] * this.AvagCookie ));
             this.total += this.cookieSales[i];
         }
     },
@@ -263,7 +263,7 @@ let Lima =
     {
         let LiEl = document.createElement('li');
         UlEl.appendChild(LiEl);
-        LiEl.textContent = `${time[i]} : ${ this.cookieSales[i]}`;
+        LiEl.textContent = `${time[i]} : ${ this.cookieSales[i]} cookies`;
     }
 
     let total= document.createElement('li');
@@ -275,7 +275,7 @@ let Lima =
     {
         for(let i=0;i<time.length;i++)
         { 
-            this.cookieSales.push( this.CustomerNum[i] * this.AvagCookie );
+            this.cookieSales.push(Math.floor( this.CustomerNum[i] * this.AvagCookie ));
             this.total += this.cookieSales[i];
         }
     },
