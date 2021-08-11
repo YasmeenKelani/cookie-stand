@@ -74,7 +74,13 @@ Location.prototype.calculatecustomerNum= function(){
         trEl.appendChild(thEl10);
         thEl10.textContent = 'Daily Location Total';
     }
-     
+
+    let myform = document.getElementById('myForm');
+        myform.addEventListener('submit', addStore);
+        function addStore(event) {
+        
+           
+
     createTableHeader();
      
     function createTableFooter(){
@@ -95,6 +101,17 @@ Location.prototype.calculatecustomerNum= function(){
                 TotalofT += LocationArray[j].cookieSales[i];
      
         }
+        event.preventDefault();
+        let locationName = event.target.locationName.value;
+        let minCust = event.target.minCust.value;
+        let maxCust = event.target.maxCust.value;
+        let AvgCookie = event.target.AvgCookie.value;
+        let newStore = new Store(locationName , minCust, maxCust , AvgCookie);
+        let tableLeg = tableEl.rows.length-1;
+        tableEl.deleteRow(tableLeg);
+        newStore.getcustomerNumber();
+        newStore.getsales();
+        newStore.render();
          
     let thEl10 = document.createElement('td');
         trEl.appendChild(thEl10);
@@ -105,7 +122,7 @@ Location.prototype.calculatecustomerNum= function(){
         thEl70.textContent = TotalofT;
     };
 
-
+  }
     let Seattle= new Location ('Seatlle', 23, 65,6.3)
     let Tokyo=   new Location ('Tokyo', 3, 24,1.2)
     let Dubai=   new Location ('Dubai', 11, 38,3.7)
@@ -132,4 +149,4 @@ Location.prototype.calculatecustomerNum= function(){
     Lima.calculatecookieSales();
     Lima.render()
 
-    createTableFooter();
+    createTableFooter(); 
