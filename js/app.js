@@ -113,6 +113,7 @@ Location.prototype.calculatecustomerNum= function(){
         let maxCustomer = event.target.maxCustomer.value;
         let avgCookie = event.target.avgCookie.value;
         let newStore = new Store(storeName , minCustomer, maxCustomer , avgCookie);
+        
         let tableLeg = tableEl.rows.length-1;
         tableEl.deleteRow(tableLeg);
         newStore.getcustomerNumber();
