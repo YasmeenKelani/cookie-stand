@@ -108,17 +108,20 @@ Location.prototype.calculatecustomerNum= function(){
     function addStore(event) {
     
         event.preventDefault();
-        let storeName = event.target.storeName.value;
-        let minCustomer = event.target.minCustomer.value;
-        let maxCustomer = event.target.maxCustomer.value;
+        let locationName = event.target.locationName.value;
+        let minCum = event.target.minCum.value;
+        let maxCum = event.target.maxCum.value;
         let avgCookie = event.target.avgCookie.value;
-        let newStore = new Store(storeName , minCustomer, maxCustomer , avgCookie);
+        let newStore = new Location(locationName , minCum, maxCum , avgCookie);
         
         let tableLeg = tableEl.rows.length-1;
         tableEl.deleteRow(tableLeg);
-        newStore.getcustomerNumber();
-        newStore.getsales();
+
+        newStore.calculatecustomerNum();
+        newStore.calculatecookieSales();
         newStore.render();
+
+        createTableFooter(); 
     }
      
     let Seattle= new Location ('Seatlle', 23, 65,6.3)
