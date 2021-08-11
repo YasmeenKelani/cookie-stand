@@ -111,6 +111,7 @@ Location.prototype.calculatecustomerNum= function(){
     let Dubai=   new Location ('Dubai', 11, 38,3.7)
     let Paris=   new Location ('Paris', 20, 38,2.3)
     let Lima=    new Location ('Lima', 2, 16,4.6)
+
     Seattle.calculatecustomerNum();
     Seattle.calculatecookieSales();
     Seattle.render()
@@ -130,4 +131,5 @@ Location.prototype.calculatecustomerNum= function(){
     Lima.calculatecustomerNum();
     Lima.calculatecookieSales();
     Lima.render()
+
     createTableFooter();
