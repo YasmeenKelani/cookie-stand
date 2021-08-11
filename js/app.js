@@ -74,13 +74,7 @@ Location.prototype.calculatecustomerNum= function(){
         trEl.appendChild(thEl10);
         thEl10.textContent = 'Daily Location Total';
     }
-
-    let myform = document.getElementById('myForm');
-        myform.addEventListener('submit', addStore);
-        function addStore(event) {
         
-           
-
     createTableHeader();
      
     function createTableFooter(){
@@ -98,20 +92,7 @@ Location.prototype.calculatecustomerNum= function(){
              
             for(let j=0 ; j<LocationArray.length;j++){
                 totalSales +=LocationArray[j].cookieSales[i];
-                TotalofT += LocationArray[j].cookieSales[i];
-     
-        }
-        event.preventDefault();
-        let locationName = event.target.locationName.value;
-        let minCust = event.target.minCust.value;
-        let maxCust = event.target.maxCust.value;
-        let AvgCookie = event.target.AvgCookie.value;
-        let newStore = new Store(locationName , minCust, maxCust , AvgCookie);
-        let tableLeg = tableEl.rows.length-1;
-        tableEl.deleteRow(tableLeg);
-        newStore.getcustomerNumber();
-        newStore.getsales();
-        newStore.render();
+                TotalofT += LocationArray[j].cookieSales[i]; }
          
     let thEl10 = document.createElement('td');
         trEl.appendChild(thEl10);
@@ -121,8 +102,25 @@ Location.prototype.calculatecustomerNum= function(){
         trEl.appendChild(thEl70);
         thEl70.textContent = TotalofT;
     };
+    let myform = document.getElementById('myForm');
+    myform.addEventListener('submit', addStore);
 
-  }
+    function addStore(event) {
+    
+        event.preventDefault();
+        let storeName = event.target.storeName.value;
+        let minCustomer = event.target.minCustomer.value;
+        let maxCustomer = event.target.maxCustomer.value;
+        let avgCookie = event.target.avgCookie.value;
+        let newStore = new Store(storeName , minCustomer, maxCustomer , avgCookie);
+        
+        let tableLeg = tableEl.rows.length-1;
+        tableEl.deleteRow(tableLeg);
+        newStore.getcustomerNumber();
+        newStore.getsales();
+        newStore.render();
+    }
+     
     let Seattle= new Location ('Seatlle', 23, 65,6.3)
     let Tokyo=   new Location ('Tokyo', 3, 24,1.2)
     let Dubai=   new Location ('Dubai', 11, 38,3.7)
