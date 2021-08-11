@@ -1,34 +1,235 @@
 body {
-    background-image: url(https://kingcountywtd.files.wordpress.com/2017/03/salmoncookies.jpg?w=640);
-    background-repeat: no-repeat;
-    background-size: 98%;
-}
-
-header{
-  border: 1px solid white;
-background-color: rgb(231, 231, 231);
-}
-
-header  li {
-  margin: 20px;
-  display: inline;
-  padding: 12px;
-  padding-bottom: 12px;
+  /* width: 100%; */
+  background-image: url(https://cdn.wallpapersafari.com/98/5/p3n17q.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+   }
+h1{
+  text-align: center;
+  width: 100%;
+  color: #FFC48A;
 
 }
+#myHeader {
+  display: flex;
+  align-items: center;
+  background-color: #3B2215;
+  justify-content: space-around;
+  height: 85px;
+  width: 100%;
+ position: fixed; 
+  z-index: 2;
 
-header li a {
-  color: blue;
+ 
+}
+#link :hover {
+  color: aliceblue;
+}
+
+#blueSalmon 
+{
+  padding-top: 100px;
+ float: right;
+}
+
+nav {
+  padding-top: 79px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+nav ul li {
+  color: #FFC48A;
+  width: 20%;
+  list-style: none;
+  
+}
+nav:nth-of-type(1) ul li{
+ display: inline-block;
+}
+nav:nth-of-type(1){
+text-align: center;
+padding-bottom: 75px;
+}
+nav ul li a {
+  color: #FFC48A;
+  text-align: center;
+  padding: 8px 0;
+  display: block; 
+  width: 100%;
+  background: #3B2215;
   text-decoration: none;
 }
 
+#salmon1{
+  width: 200px;
+  height: 62.515883100381px;
+  padding-top: 0.25%;
+  padding-right: 1%;
+}
 
+#salmon2{
+  padding-top: 100px;
+}
+
+#salmon2 img{
+  width: 600px;
+  height: 187.54764930114px;
+  margin: auto;
+  display:block;
+}
+
+/*Fish moving*/
+
+@-webkit-keyframes moving
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.moving:hover
+{
+        -webkit-animation: moving 1s ease;
+        animation: moving 1s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+}
+
+
+#article {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  padding-top: 50px;
+  width: 50%;
+  color: black;
+  margin: auto;
+  background-image: url("img/cutback3.jpg");
+}
+
+
+#left {
+  margin: auto;
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  float: left;
+}
+
+#left ul {
+  text-align: center;
+}
+
+#left li {
+  margin: 10px 0px 0px 0px;
+}
+
+#left h3 {
+  padding-top: 85px;
+  text-align: center;
+  font-family: 'Courgette', cursive;
+  color: black;
+}
+
+#opening {
+  margin: auto;
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  float:right;
+
+}
+#opening h2 {
+  padding-top: 85px;
+  text-align: center;
+  font-family: 'Courgette', cursive;
+  color: black;
+}
+
+#opening ul li {
+  text-align: center;
+  list-style: none;
+}
+
+
+#shirt {
+   clear: both; 
+  color: black;
+  font-family: 'Courgette', cursive;
+  /* text-align: left; */
+  margin-left: 9px;;
+}
+
+#shirt p {
+  color:black;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 19px;
+  
+}
+
+#contact {
+  margin: auto;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+#contact a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+#contact a:hover {
+  color: blue;
+}
+
+#contact h4 {
+  margin-bottom: 0px;
+  font-family: 'Courgette', cursive;
+}
 
 table,
 th,
 td {
-  border: 1px solid blue;
-background-color: white;
+  border: 1px solid white;
+background-color: rgba(82, 68, 68, 0.37);
+color: white;
 padding-top: 10px;
 padding-bottom: 10px;
-margin: 5px;}
+margin: 5px;} 
